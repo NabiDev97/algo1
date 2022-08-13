@@ -1,0 +1,61 @@
+ALGORITHM algorithm_name
+ VAR tab : ARRAY_OF char[];
+      cpm,cpv,i:INTEGER;
+  BEGIN
+    Write("Donnez votre phrase svp");
+    Read(tab);
+    cpm :=0;
+      cpv :=0;
+    FOR i:= 0 to tab.lenght DO 
+          IF ((tab[i] == ' ') 
+               cmp:= cpm + 1;
+            END_IF
+               SWITCH (tab[i]) DO
+                   case a : cpv := cpv +1;
+                   case o : cpv := cpv +1;
+                   case u : cpv := cpv +1;
+                   case i : cpv := cpv +1;
+                   case e : cpv := cpv +1;
+                   case y: cpv := cpv +1;
+               END_SWITCH
+        END_FOR
+        write("Nombre de mot = ",cpm,"Nombre de voyelle = ",cpv );
+END
+     
+
+
+
+
+
+ALGORITHM algorithm_name
+VAR tab1,tab2 : ARRAY_OF type[1..100];
+    i,j,m,n :INTEGER;
+    sDub:INTEGER;
+    sDist:INTEGER;
+    sDub:=0;
+    sDist:=0;
+BEGIN
+    Write("Donnez la taille du tableau1");
+    Read(n);
+    FOR i FROM 0 STEP n-1 step 1 DO
+        Write("DONNEz l'element a l,index" i);
+        Read(tab1[i]);
+    END_FOR
+    Write("Donnez la taille du tableau2");
+    Read(m);
+    FOR j FROM 0 STEP m-1 step 1 DO
+        Write("DONNEz l'element a l,index" j);
+        Read(tab1[j]);
+    END_FOR
+    FOR i FROM 0 STEP n-1 step 1 DO
+        FOR j FROM 0 STEP m-1 step 1 DO
+            IF(tab1[i] == tab2[j]) THEN
+            sDub= sDub + 2*tab1[i];
+            ELSE
+                sDist= tab1[i]+tab2[j];
+            END_IF
+            END_IF
+        END_FOR
+    END_FOR
+    Write(sDist);
+END
